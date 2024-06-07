@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instagram Feed</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container m-6 bg-white p-0" id="Post">
+      <header>
+        <div id="navbar">
+          <nav class="navbar bg-secondary d-flex justify-content-between">
+            <div class="mx-2 container-fluid">
+              <div id="navbar_left">
+                <span style="color: white" class="navbar-brand mb-0 h1"><i class="fa-brands fa-instagram"></i> Instagram</span>
+              </div>
+              <div class="d-flex" id="navbar_right">
+                <button type="button" class="mx-2 btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create a new post</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Caption:</label>
+                            <textarea class="form-control" placeholder="Add the caption of your post here!" id="message-text"></textarea>
+                          </div>
+                          <button type="button" class="btn btn-outline-danger border-secondary bg-light"><i class="fa-solid fa-camera"></i></button>
+                          <button type="button" class="btn btn-outline-danger border-secondary bg-light"><i class="fa-solid fa-location-dot"></i></button>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger">Publish</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn-group">
+                  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">Profile</a></li>
+                    <li><a class="dropdown-item">Accesibility</a></li>
+                    <li><a class="dropdown-item">Privacy and Data</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger">Log out</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <div class="container view-selector d-flex justify-content-center my-4" id="changeView">
+        <div class="mx-4">
+          <button type="button" onclick="mosaico()">
+            <i class="fa-solid fa-calendar-days"></i>
+          </button>
+        </div>
+        <div class="mx-4">
+          <button type="button" onclick="vertical()">
+            <i class="fa-sharp fa-solid fa-arrow-down-long"></i>
+          </button>
+        </div>
+      </div>
+      <main>
+        <div class="mosaico" id="mosaico">
+          <div class="container-fluid p-0 m-0">
+            <div class="row mx-0 my-2">
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/17/425/500" class="img-fluid" alt="pic1">
+                </div>
+              </div>
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/28/425/500" class="img-fluid" alt="pic2">
+                </div>
+              </div>
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/76/425/500" class="img-fluid" alt="pic3">
+                </div>
+              </div>
+            </div>
+            <div class="row mx-0 my-2">
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/103/425/500" class="img-fluid" alt="pic4">
+                </div>
+              </div>
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/127/425/500" class="img-fluid" alt="pic5">
+                </div>
+              </div>
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/176/425/500" class="img-fluid" alt="pic6">
+                </div>
+              </div>
+            </div>
+            <div class="row mx-0 my-2">
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/217/425/500" class="img-fluid" alt="pic7">
+                </div>
+              </div>
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/228/425/500" class="img-fluid" alt="pic8">
+                </div>
+              </div>
+              <div class="col-12 col-md-4 px-1">
+                <div class="img-container">
+                  <img src="https://picsum.photos/id/276/425/500" class="img-fluid" alt="pic9">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vertical" id="vertical" style="display: none;">
+          <div class="row">
+            <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+              <div class="d-flex justify-content-between mx-2">
+                <h3>Rocky Mountains</h3>
+                <p>01/09</p>
+              </div>
+              <div class="mx-0">
+                <img src="https://picsum.photos/id/256/700/500" class="img-fluid" alt="foto1">
+              </div>
+              <div class="mx-2">
+                <p class="mt-2 my-0"><strong>17600 Likes</strong></p>
+                <p>The Rocky Mountains, also known as the Rockies, are a major mountain range and the largest mountain system in North America. The Rocky Mountains stretch 3,000 miles (4,800 kilometers) in straight-line distance from the northernmost part of western Canada, to New Mexico </p>
+              </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+              <div class="d-flex justify-content-between mx-2">
+                <h3>Byron Bay</h3>
+                          <p>02/09</p>
+                      </div>
+                      <div class="mx-0">
+                          <img src="https://picsum.photos/id/356/700/500"
+                              class="img-fluid" alt="foto2">
+                      </div>
+                      <div class="mx-2">
+                          <p class="mt-2 my-0"><strong>12200 Likes</strong></p>
+                          <p>Byron Bay (Minjungbal: Cavvanbah) is a beachside town located in the far-northeastern corner of New South Wales, Australia (in Bundjalung Country). It is located 772 kilometres (480 mi) north of Sydney and 165 kilometres (103 mi) south of Brisbane </p>
+                      </div>
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+                    <div class="d-flex justify-content-between mx-2">
+                        <h3>Valley of Flowers</h3>
+                        <p>03/09</p>
+                    </div>
+                    <div class="mx-0">
+                        <img src="https://picsum.photos/id/426/700/500"
+                            class="img-fluid" alt="foto3">
+                    </div>
+                    <div class="mx-2">
+                        <p class="mt-2 my-0"><strong>27600 Likes</strong></p>
+                        <p>Valley of Flowers National Park is an Indian national park which was established in 1982. It is located in Chamoli in the state of Uttarakhand and is known for its meadows of endemic alpine flowers and the variety of flora. This richly diverse area is also home to rare and endangered animals, including the Asiatic black bear, snow leopard, musk deer, brown bear, red fox and blue sheep. </p>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+                  <div class="d-flex justify-content-between mx-2">
+                      <h3>Catholic Church in Mongolia</h3>
+                      <p>04/09</p>
+                  </div>
+                  <div class="mx-0">
+                      <img src="https://picsum.photos/id/510/700/500"
+                          class="img-fluid" alt="foto4">
+                  </div>
+                  <div class="mx-2">
+                      <p class="mt-2 my-0"><strong>4006 Likes</strong></p>
+                      <p>The Catholic Church in Mongolia is part of the worldwide Catholic Church, under the spiritual leadership of the Pope in Rome.
+
+                        There were approximately 1,300 Catholics[1] in the country in 2017; they were served by three churches in the capital Ulaanbaatar plus churches in Darkhan, Arvaikheer, Erdenet and mission stations that may grow into churches. That population increased to 1,450 by 2023 </p>
+                  </div>
+              </div>
+              <div class="w-100"></div>
+              <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+                <div class="d-flex justify-content-between mx-2">
+                    <h3>Lizza di Piastreta</h3>
+                    <p>05/09</p>
+                </div>
+                <div class="mx-0">
+                    <img src="https://picsum.photos/id/419/700/500"
+                        class="img-fluid" alt="foto5">
+                </div>
+                <div class="mx-2">
+                    <p class="mt-2 my-0"><strong>170600 Likes</strong></p>
+                    <p>The Lizza di Piastreta, also known as Monorotaia di Piastreta ("Piastreta Monorail"), was an Italian industrial monorail serving the marble quarry of Piastreta, in the Apuan Alps, and linking it to Renara, in the municipal territory of Massa, Tuscany. </p>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+              <div class="d-flex justify-content-between mx-2">
+                  <h3>Aurora</h3>
+                  <p>06/09</p>
+              </div>
+              <div class="mx-0">
+                  <img src="https://picsum.photos/id/724/700/500"
+                      class="img-fluid" alt="foto6">
+              </div>
+              <div class="mx-2">
+                  <p class="mt-2 my-0"><strong>215087 Likes</strong></p>
+                  <p>An aurora (pl. aurorae or auroras), also commonly known as the northern lights (aurora borealis) or southern lights (aurora australis), is a natural light display in Earth's sky, predominantly seen in high-latitude regions (around the Arctic and Antarctic). Auroras display dynamic patterns of brilliant lights that appear as curtains, rays, spirals, or dynamic flickers covering the entire sky </p>
+              </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+            <div class="d-flex justify-content-between mx-2">
+                <h3>Unidentified flying object</h3>
+                <p>07/09</p>
+            </div>
+            <div class="mx-0">
+                <img src="https://picsum.photos/id/723/700/500"
+                    class="img-fluid" alt="foto7">
+            </div>
+            <div class="mx-2">
+                <p class="mt-2 my-0"><strong>172190 Likes</strong></p>
+                <p>An unidentified flying object (UFO), or unidentified anomalous phenomenon (UAP), is any perceived airborne, submerged or transmedium phenomenon that cannot be immediately identified or explained. Upon investigation, most UAPs are identified as known objects or atmospheric phenomena, while a small number remain unexplained.</p>
+            </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+          <div class="d-flex justify-content-between mx-2">
+              <h3>Iron Dome</h3>
+              <p>08/09</p>
+          </div>
+          <div class="mx-0">
+              <img src="https://picsum.photos/id/616/700/500"
+                  class="img-fluid" alt="foto8">
+          </div>
+          <div class="mx-2">
+              <p class="mt-2 my-0"><strong>144009 Likes</strong></p>
+              <p>Iron Dome (Hebrew: כִּפַּת בַּרְזֶל, romanized: Kippat Barzel) is an Israeli mobile all-weather air defense system, developed by Rafael Advanced Defense Systems and Israel Aerospace Industries. The system is designed to intercept and destroy short-range rockets and artillery shells fired from distances of 4 to 70 kilometres (2–43 mi) away and whose trajectory would take them to an Israeli populated area.</p>
+          </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-10 col-lg-8 col-xl-6 m-auto my-2 p-0 border border-3 border-secondary rounded">
+        <div class="d-flex justify-content-between mx-2">
+            <h3>Pakistan</h3>
+            <p>09/09</p>
+        </div>
+        <div class="mx-0">
+            <img src="https://picsum.photos/id/699/700/500"
+                class="img-fluid" alt="foto9">
+        </div>
+        <div class="mx-2">
+            <p class="mt-2 my-0"><strong>1331900 Likes</strong></p>
+            <p>Pakistan, officially the Islamic Republic of Pakistan, is a country in South Asia. It is the fifth-most populous country, with a population of over 241.5 million, having the second-largest Muslim population as of 2023. Islamabad is the nation's capital, while Karachi is its largest city and financial centre. Pakistan is the 33rd-largest country by area and the ninth-largest in Asia. Bounded by the Arabian Sea on the south, the Gulf of Oman on the southwest, and the Sir Creek on the southeast, it shares land borders with India to the east; Afghanistan to the west; Iran to the southwest; and China to the northeast. It shares a maritime border with Oman in the Gulf of Oman, and is separated from Tajikistan in the northwest by Afghanistan's narrow Wakhan Corridor.
+             </p>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+</main>
+</div>
+
+
+</div>
+    </div>
+
+    <script>
+      function vertical() {
+        document.getElementById('mosaico').style.display = 'none';
+        document.getElementById('vertical').style.display = 'block';
+      }
+
+      function mosaico() {
+        document.getElementById('vertical').style.display = 'none';
+        document.getElementById('mosaico').style.display = 'block';
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+          
+      <script src="https://kit.fontawesome.com/4e8197ba37.js" crossorigin="anonymous"></script>
+    </body>
+  </html>
